@@ -1,0 +1,750 @@
+/* BASE CONTENT */
+
+/* adds the fonts for the pages */
+
+@font-face {
+    font-family: thisSideUp;
+    src: url("../font/This side up.ttf");
+}
+
+@font-face {
+    font-family: lifesABeachThin;
+    src: url("../font/Life's A Beach Thin.ttf");
+}
+
+/* resets margin and padding to 0 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* assigns the main font for the page */
+
+body {
+    font-family: thisSideUp;
+    font-size: 1em;
+	min-width: 890px;
+}
+
+/* HEADER */
+
+/* forces the header to the top with z-index at 999 */
+
+#header {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+	min-width: 890px;
+    height: 40px;
+    z-index: 999;
+	font-size: 0.8em;
+}
+
+#header a {
+    font-weight: lighter;
+}
+
+/* resizes the header as the browser size reduces */
+
+@media screen and (min-width: 1200px) {
+	#header {
+		font-size: 1em;
+	}
+}
+
+/* changes font and box-model for header links */
+
+.menu a {
+    padding: 5px 10px;
+    font-size: 175%;
+    width: 115px;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* changes background color for menu */
+
+.menu {
+    background-color: black;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    float: left;
+}
+
+#registerNav {
+    float: right;
+    font-size: 0.7em;
+    line-height: 40px;
+}
+
+#registerNav a {
+    padding: 5px 10px;
+    font-size: 175%;
+    width: 115px;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* changes background color for menu on hover */
+
+.menu:hover {
+    background-color: #888888;
+}
+
+.menu:hover a #registerNav {
+    background-color: black;
+}
+
+/* floats the profile icon to the right and adds padding */
+
+.profile {
+    float: right;
+    padding-right: 10px;
+}
+
+/* HEADER MENU DROP DOWN */
+
+/* makes the font in the dropdown smaller */
+
+.dropdown a {
+    font-size: 120%;
+}
+
+.dropdown li {
+    text-align: center;
+}
+
+/* removes bullets and changes the font size for the menu */
+
+.menu ul {
+    list-style: none;
+    font-size: 100%;
+    font-weight: 400;
+}
+
+/* sets the colors for the menu */
+
+.menu ul li a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+/* initially hides the menu */
+
+.dropdown {
+    display: none;
+}
+
+/* displays the menu items when you hover the menu */
+
+.menu:hover ul.dropdown {
+    display: block;
+    background-color: black;
+    color: white;
+    margin-top: -3px;
+}
+
+/* displays an underline when you hover menu items */
+
+.menu:hover ul.dropdown:hover a:hover {
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+}
+
+/* BANNERS * /
+
+/* makes a static background for the main info page */
+
+#fitInTime {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+    width: 100%;
+}
+
+#nutrition {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/background2.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#fitness {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/background3.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+/* INFORMATION BOX (for main banner) */
+
+#logo {
+    float: right;
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 100px;
+    text-align: center;
+    margin-right: 125px;
+    border-radius: 25px;
+    padding: 25px;
+}
+
+#logo h1 {
+    font-size: 650%;
+    font-weight: normal;
+}
+
+#logo p {
+    font-size: 250%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#logo a {
+    text-decoration: none;
+    color: black;
+}
+
+#logo #miniNav {
+    font-size: 450%;
+}
+
+#logo a:hover {
+	color: white;
+	/*           Color   ignore   weight*/
+    text-shadow: #000000 0px 0px 5px;
+}
+
+/* INFORMATION BOXES (for all pages and initial banner) */
+
+.introduction {
+    float: right;
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin-top: 75px;
+    text-align: center;
+    margin-right: 125px;
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.introduction h1 {
+    font-size: 650%;
+    font-weight: normal;
+}
+
+.introduction p {
+    font-size: 250%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.introduction a {
+    text-decoration: none;
+    color: black;
+    font-size: 450%;
+}
+
+.introduction a:hover {
+    color: white;
+	/*           Color   ignore   weight*/
+    text-shadow: #000000 0px 0px 5px;
+}
+
+/* RECIPES and EXERCISES (on main page) */
+
+#recipe {
+    height: 1000px;
+}
+
+.imageLink {
+    width: 33.3333333%;
+    float: left;
+    overflow: hidden;
+    margin-top: -5px;
+    position: relative;
+}
+
+.imageLink {
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -ms-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    filter: grayscale(1);
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+.imageLink:hover {
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+#exercise {
+    height: 1000px;
+}
+
+/* REGISTER (on main page) */
+
+#register {
+    background-image: url("../images/background4.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+    position: relative;
+}
+
+#inputText {
+    font-weight: lighter;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#registerText {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 30px;
+    font-weight: lighter;
+}
+
+#registerBox {
+    background-color: white;
+    width: 500px;
+    height: auto;
+    padding-bottom: 20px;
+    margin: auto;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    border-radius: 25px;
+    border: 10px solid white;
+}
+
+#registerBox label {
+    font-weight: lighter;
+}
+
+#inputBoxes table {
+    margin: auto;
+    width: 100%;
+    top: 30%;
+}
+
+#inputBoxes th {
+    text-align: right;
+    padding-right: 5px;
+}
+
+/* FOOTER (on all pages) */
+
+#backToTop {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 10%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50px;
+    height: 50px;
+}
+
+#footerTable {
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#footerTable th {
+    padding: 0 50px;
+}
+
+#footerTable td {
+    padding: 5px;
+}
+
+#footer {
+    /*border-top: 5px gray solid;*/
+    background-color: #FFFFFF;
+    color: black;
+    padding: 50px;
+    text-align: center;
+}
+
+#footer a {
+    color: black;
+    text-decoration: none;
+}
+
+/* RECIPE & EXERCISE INFORMATION */
+
+.information {
+    float: right;
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    margin-right: 125px;
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.information h1 {
+    font-size: 400%;
+    padding-bottom: 10px;
+    font-weight: normal;
+}
+
+.information p {
+    text-align: left;
+    font-size: 250%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.information ul {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 40px;
+}
+
+.information li {
+    font-size: 1.1em;
+}
+
+.information ol {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 40px;
+}
+
+.fontSize {
+    font-size: 0.5em;
+}
+
+/* 15 MINUTE RECIPES */
+
+#fifteen1 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/food/15Recipes/quesadillasbg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+#fifteen2 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/food/15Recipes/filletsbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+#fifteen3 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/food/15Recipes/shrimpbg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+/*30 MINUTE RECIPES */
+
+#thirty1 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/food/30Recipes/MisoSalmonbg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+#thirty2 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/food/30Recipes/TurkeySkilletbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+#thirty3 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/food/30Recipes/VeggieSandwichbg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+/*60 MINUTE RECIPES */
+
+#sixty1 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/food/60Recipes/ChickenRedWinebg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+#sixty2 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/food/60Recipes/SpinachChickenbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+#sixty3 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/food/60Recipes/TurkeyMeatloafbg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+/* 15 MINUTE EXERCISES */
+
+#fifteen4 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/exercise/15Exercise/lungebg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+#fifteen5 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/exercise/15Exercise/pushupbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+#fifteen6 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/exercise/15Exercise/situpbg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+/* 30 MINUTE EXERCISES */
+
+#thirty4 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/exercise/30Exercise/bikingbg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+#thirty5 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/exercise/30Exercise/treadmillbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+#thirty6 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/exercise/30Exercise/rowbg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+/* 60 MINUTE EXERCISES */
+#sixty4 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/exercise/60Exercise/armsbg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+#sixty5 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/exercise/60Exercise/chestbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+#sixty6 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/exercise/60Exercise/backbg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+}
+
+.imageLink a p {
+    color: black;
+    width: 100%;
+    height: 1000px;
+    z-index: 10;
+    position: absolute;
+    line-height: 1000px;
+    margin: auto;
+    text-align: center;
+    font-size: 10em;
+    background-color: rgba(255,255,255,0.5);
+    /*Fade text in*/
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    opacity: 100;
+}
+
+.imageLink a:hover p {
+    /*Fade text out*/
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    opacity: 0;
+}
+/*Center the generated error messages on the register_form.php page*/
+#registerForm ul.err{
+    padding: 20px;
+    padding-left: 40px;
+    background-color: pink;
+    width: 40%;
+    position: relative;
+    border: 2px solid red;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#loginForm ul.err{
+    padding: 20px;
+    padding-left: 40px;
+    background-color: pink;
+    width: 40%;
+    position: relative;
+    border: 2px solid red;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#forumTable {
+	padding-top: 100px;
+}
+#forumTable table{
+    margin: auto;
+}
+#loginError {
+	display:none;
+}
+#regError{
+	display:none;
+}
+.print {
+    float: right;
+}
+/*extra*/
+
+div.error{
+    background-color: pink;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
